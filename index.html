@@ -2,32 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My ePortfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Computer Science ePortfolio</title>
   <style>
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column; /* Stack elements vertically */
-      height: 100vh;
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0a1a33; /* Dark blue background */
-      color: #ffffff; /* White text */
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px 0;
       text-align: center;
     }
-    h1 {
-      margin-bottom: 10px;
+    header h1 {
+      margin: 0;
     }
-    p {
-      font-size: 18px;
-      max-width: 600px;
-      padding: 0 20px;
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    footer a {
+      color: #1abc9c;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>**Christopher Holland - ePortfolio**</h1>
-  <p>This site showcases some of the projects I’ve worked on during my software engineering capstone course</p>
+
+<header>
+  <h1>My Computer Science ePortfolio</h1>
+  <p>Software Design & Engineering | Algorithms & Data Structures | Databases</p>
+</header>
+
+<section>
+  <h2>Professional Self-Assessment</h2>
+  <p><em>[Placeholder for self-assessment — to be replaced with your introduction and career goals]</em></p>
+</section>
+
+<section>
+  <h2>Artifact 1: [Title Here]</h2>
+  <p><strong>Before:</strong> [Brief summary of original version]</p>
+  <p><strong>After Enhancements:</strong> [Paste narrative 1 here]</p>
+</section>
+
+<section>
+  <h2>Artifact 2: [Title Here]</h2>
+  <p><strong>Before:</strong> [Brief summary of original version]</p>
+  <p><strong>After Enhancements:</strong> [Paste narrative 2 here]</p>
+</section>
+
+<section>
+  <h2>Artifact 3: [Title Here]</h2>
+  <p><strong>Before:</strong> [Brief summary of original version]</p>
+  <p><strong>After Enhancements:</strong> [Paste narrative 3 here]</p>
+</section>
+
+<section>
+  <h2>Code Review Video</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+            title="Code Review Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <p>Contact: <a href="mailto:your.email@example.com">your.email@example.com</a> | 
+     <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
+     <a href="https://github.com/yourgithub" target="_blank">GitHub</a></p>
+</footer>
+
 </body>
 </html>
