@@ -9,5 +9,3 @@ I believe I have successfully met all the goals I established in Module One. Thr
 The enhancement process taught me how to translate abstract data models into a working, real-world backend system. I also had to rethink how my original search and reservation logic would function within a non-linear data store like MongoDB. One of the biggest challenges I faced was maintaining the logical integrity of the original system while making such a significant transformation. Adapting to the event-driven, asynchronous nature of Node.js required a shift in how I approached function flow, especially around database reads and writes.
 
 Overall, this enhancement allowed me to deepen my skills in data structures and algorithms by bridging the gap between classroom knowledge and real-world application. I’ve gained valuable experience that I can apply not only to future academic projects but also to potential career opportunities in web development.
-
-![Animal Rescue Inventory System Screenshot](https://github.com/user-attachments/assets/1dfadbc7-5952-4647-8a1e-ea363b06c8ea)
