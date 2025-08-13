@@ -88,17 +88,35 @@ fetch('artifact1.md')
   });
 </script>
 
-<section>
-  <h2>Artifact 2: [Title Here]</h2>
-  <p><strong>Before:</strong> [Brief summary of original version]</p>
-  <p><strong>After Enhancements:</strong> [Paste narrative 2 here]</p>
+<section id="artifact1">
+  <h2>Data Structures and Algorithms</h2>
+  <div id="artifact2-text">Loading...</div>
 </section>
 
-<section>
-  <h2>Artifact 3: [Title Here]</h2>
-  <p><strong>Before:</strong> [Brief summary of original version]</p>
-  <p><strong>After Enhancements:</strong> [Paste narrative 3 here]</p>
+<!-- Script to load markdown -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+fetch('artifact2.md')
+  .then(response => response.text())
+  .then(text => {
+    document.getElementById('artifact2-text').innerHTML = marked.parse(text);
+  });
+</script>
+
+<section id="artifact1">
+  <h2>Databases</h2>
+  <div id="artifact3-text">Loading...</div>
 </section>
+
+<!-- Script to load markdown -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+fetch('artifact3.md')
+  .then(response => response.text())
+  .then(text => {
+    document.getElementById('artifact3-text').innerHTML = marked.parse(text);
+  });
+</script>
 
 <section>
   <h2>Code Review Video</h2>
