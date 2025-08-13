@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Christopher Holland - Computer Science ePortfolio</title>
   <style>
     body {
@@ -70,60 +70,30 @@
 
 <section>
   <h2>Professional Self-Assessment</h2>
-  <p><em>[Placeholder for self-assessment — to be replaced with your introduction and career goals]</em></p>
+  <div id="self-assessment"></div>
 </section>
 
 <section id="artifact1">
   <h2>Software Design and Engineering</h2>
-  <div id="artifact1-text">Loading...</div>
+  <div id="artifact1-text"></div>
 </section>
-
-<!-- Script to load markdown -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>
-fetch('artifact1.md')
-  .then(response => response.text())
-  .then(text => {
-    document.getElementById('artifact1-text').innerHTML = marked.parse(text);
-  });
-</script>
 
 <section id="artifact2">
   <h2>Data Structures and Algorithms</h2>
-  <div id="artifact2-text">Loading...</div>
+  <div id="artifact2-text"></div>
 </section>
-
-<!-- Script to load markdown -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>
-fetch('artifact2.md')
-  .then(response => response.text())
-  .then(text => {
-    document.getElementById('artifact2-text').innerHTML = marked.parse(text);
-  });
-</script>
 
 <section id="artifact3">
   <h2>Databases</h2>
-  <div id="artifact3-text">Loading...</div>
+  <div id="artifact3-text"></div>
 </section>
-
-<!-- Script to load markdown -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>
-fetch('artifact3.md')
-  .then(response => response.text())
-  .then(text => {
-    document.getElementById('artifact3-text').innerHTML = marked.parse(text);
-  });
-</script>
 
 <section>
   <h2>Code Review Video</h2>
   <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
-            title="Code Review Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Code Review Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
     </iframe>
   </div>
@@ -134,6 +104,28 @@ fetch('artifact3.md')
      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
      <a href="https://github.com/yourgithub" target="_blank">GitHub</a></p>
 </footer>
+
+<!-- Load Marked.js once -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  const sections = [
+    { id: "self-assessment", file: "self-assessment.md" },
+    { id: "artifact1-text", file: "artifact1.md" },
+    { id: "artifact2-text", file: "artifact2.md" },
+    { id: "artifact3-text", file: "artifact3.md" }
+  ];
+
+  sections.forEach(({ id, file }) => {
+    fetch(file)
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById(id).innerHTML = marked.parse(text);
+      })
+      .catch(() => {
+        document.getElementById(id).innerHTML = "<p>Error loading content.</p>";
+      });
+  });
+</script>
 
 </body>
 </html>
